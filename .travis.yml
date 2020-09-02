@@ -8,3 +8,10 @@ before_install:
 
 script:
   - docker run -e CI=true navrisham1/docker-frontend npm run test
+
+
+deploy:
+  provider: heroku
+  app: docker-front-end
+  api_key:
+    secure: $TOKEN
